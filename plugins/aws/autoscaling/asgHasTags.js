@@ -39,7 +39,7 @@ module.exports = {
                 if (!asg.Tags || !asg.Tags.length) {
                     helpers.addResult(results, 2, 'Auto Scaling group has no tags associated', region, asg.AutoScalingGroupARN);
                 } else {
-                    helpers.addResult(results, 0, 'Auto Scaling group has tags',region, asg.AutoScalingGroupARN);
+                    helpers.addResult(results, 0, 'Auto Scaling group has tags', region, asg.AutoScalingGroupARN);
                 }
             }
             rcb();
