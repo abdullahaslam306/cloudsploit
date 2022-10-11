@@ -42,6 +42,7 @@ module.exports = {
         'webTierIamRole'                : require(__dirname + '/plugins/aws/autoscaling/webTierIamRole.js'),
         'appTierIamRole'                : require(__dirname + '/plugins/aws/autoscaling/appTierIamRole.js'),
         'asgUnusedLaunchConfiguration'  : require(__dirname + '/plugins/aws/autoscaling/asgUnusedLaunchConfiguration.js'),
+        'asgHasTags'                    : require(__dirname + '/plugins/aws/autoscaling/asgHasTags.js'),
 
         'workgroupEncrypted'            : require(__dirname + '/plugins/aws/athena/workgroupEncrypted.js'),
         'workgroupEnforceConfiguration' : require(__dirname + '/plugins/aws/athena/workgroupEnforceConfiguration.js'),
