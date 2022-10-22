@@ -2,7 +2,7 @@ var async = require('async');
 var helpers = require('../../../helpers/aws');
 
 module.exports = {
-    title: 'Internet Gateways has tags',
+    title: 'Internet Gateways Has Tags',
     category: 'EC2',
     domain: 'Compute',
     description: 'Ensure that Internet Gateway have tags',
