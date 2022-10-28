@@ -34,6 +34,8 @@ module.exports = {
             }
             const ARNList = [];
             for (var cluster of describeCacheClusters.data) {
+                if (!cluster.ARN) continue;
+
                 ARNList.push(cluster.ARN);
             }
             helpers.checkTags(cache, 'ElastiCache cluster', ARNList, region, results);

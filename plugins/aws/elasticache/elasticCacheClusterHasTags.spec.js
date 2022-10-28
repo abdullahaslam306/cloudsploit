@@ -28,6 +28,7 @@ describe('elastiCacheClusterHasTags', function () {
             const callback = (err, results) => {
                 expect(results.length).to.equal(1);
                 expect(results[0].status).to.equal(3);
+                expect(results[0].region).to.equal('us-east-1');
                 expect(results[0].message).to.include('Unable to query for ElastiCache clusters');
                 done()
             };
@@ -40,6 +41,7 @@ describe('elastiCacheClusterHasTags', function () {
             const callback = (err, results) => {
                 expect(results.length).to.equal(1);
                 expect(results[0].status).to.equal(0);
+                expect(results[0].region).to.equal('us-east-1');
                 expect(results[0].message).to.include('No ElastiCache clusters found');
                 done();
             };
@@ -51,6 +53,7 @@ describe('elastiCacheClusterHasTags', function () {
             const callback = (err, results) => {
                 expect(results.length).to.equal(1);
                 expect(results[0].status).to.equal(3);
+                expect(results[0].region).to.equal('us-east-1');
                 expect(results[0].message).to.include('Unable to query all resources from group tagging api');
                 done();
             };
@@ -69,6 +72,7 @@ describe('elastiCacheClusterHasTags', function () {
             const callback = (err, results) => {
                 expect(results.length).to.equal(1);
                 expect(results[0].status).to.equal(0);
+                expect(results[0].region).to.equal('us-east-1');
                 expect(results[0].message).to.include('ElastiCache cluster has tags');
                 done();
             };
@@ -89,6 +93,7 @@ describe('elastiCacheClusterHasTags', function () {
                 const callback = (err, results) => {
                     expect(results.length).to.equal(1);
                     expect(results[0].status).to.equal(2);
+                    expect(results[0].region).to.equal('us-east-1');
                     expect(results[0].message).to.include('ElastiCache cluster does not have any tags');
                     done();
                 };
