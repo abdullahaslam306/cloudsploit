@@ -39,12 +39,14 @@ module.exports = {
             }
 
             for (let gateway of  describeInternetGateways.data) {
+                if (!gateway.InternetGatewayId) continue;
+
                 let arn = `arn:${awsOrGov}:vpc:${region}:${accountId}:internet-gateway/${gateway.InternetGatewayId}`;
                 
                 if (!gateway.Tags ||  gateway.Tags.length === 0) {
-                    helpers.addResult(results, 2, 'Internet Gateway has no tags.', region, arn);
+                    helpers.addResult(results, 2, 'Internet Gateway has no tags', region, arn);
                 } else {
-                    helpers.addResult(results, 0, 'Internet Gateway has tags.', region, arn);
+                    helpers.addResult(results, 0, 'Internet Gateway has tags', region, arn);
                 }
             }
             rcb();
