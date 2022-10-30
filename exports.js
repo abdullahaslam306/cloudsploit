@@ -486,7 +486,8 @@ module.exports = {
         'redshiftNodesCount'            : require(__dirname + '/plugins/aws/redshift/redshiftNodesCount.js'),
         'redshiftUnusedReservedNodes'   : require(__dirname + '/plugins/aws/redshift/redshiftUnusedReservedNodes.js'),
         'redshiftDesiredNodeType'       : require(__dirname + '/plugins/aws/redshift/redshiftDesiredNodeType.js'),
- 
+        'redshiftClusterHasTags'        : require(__dirname + '/plugins/aws/redshift/redshiftClusterHasTags.js'),
+
         'redisClusterEncryptionAtRest'  : require(__dirname + '/plugins/aws/elasticache/redisClusterEncryptionAtRest.js'),
         'reservedNodePaymentPending.js' : require(__dirname + '/plugins/aws/elasticache/reservedNodePaymentPending.js'),      
         'unusedElastiCacheReservedNode' : require(__dirname + '/plugins/aws/elasticache/unusedElastiCacheReservedNode.js'),
