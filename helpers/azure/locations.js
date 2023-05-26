@@ -112,4 +112,6 @@ module.exports = {
     wafPolicies: locations,
     routeTables: locations,
     applications: ['global'],
+    automationAccount: locations,
+    variables: locations
 };

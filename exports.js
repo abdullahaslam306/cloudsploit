@@ -932,6 +932,7 @@ module.exports = {
         'agPreventionModeEnabled'       : require(__dirname + '/plugins/azure/applicationGateway/agPreventionModeEnabled.js'),
 
         'wafPolicyHasTags'              : require(__dirname + '/plugins/azure/waf/wafPolicyHasTags.js'),
+        'variablesEncryptionEnabled'    : require(__dirname + '/plugins/azure/automationAccounts/variablesEncryptionEnabled.js'),
     },
     github: {
         'publicKeysRotated'             : require(__dirname + '/plugins/github/users/publicKeysRotated.js'),

@@ -342,6 +342,11 @@ var calls = {
             graph: true,
         }
     },
+    automationAccount: {
+        list: {
+            url: 'https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Automation/automationAccounts?api-version=2021-06-22',
+        }
+    },
     registries: {
         list: {
             url: 'https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.ContainerRegistry/registries?api-version=2019-05-01'
@@ -572,6 +577,13 @@ var postcalls = {
             properties: ['id'],
             url: 'https://management.azure.com/{id}/blobServices/default/containers?api-version=2019-06-01',
             rateLimit: 3000
+        }
+    },
+    variables: {
+        listByAutomationAccount: {
+            reliesOnPath: 'automationAccount.list',
+            properties: ['id'],
+            url: 'https://management.azure.com/{id}/variables?api-version=2019-06-01'
         }
     },
     blobServices: {
