@@ -5,10 +5,10 @@ module.exports = {
     title: 'Variables Encryption Enabled',
     category: 'Automation Account',
     domain: 'Automation',
-    description: 'Ensures that Azure Automation Account variables are encrypted.',
+    description: 'Ensure that Azure Automation Account Variables are Encrypted.',
     more_info: 'Azure Automation has the ability to share variable assets across runbooks and configurations. In doing so, it is considered best practice to encrypt these variables to ensure that sensitive information and intellectual property is protected.',
     link: 'https://learn.microsoft.com/en-us/azure/automation/shared-resources/variables',
-    recommended_action: 'Remove the effected unencrypted variable and recreate new variable with encryption enabled.',
+    recommended_action: 'Remove the unencrypted variable and recreate new variable with encryption enabled.',
     apis: ['automationAccount:list', 'variables:listByAutomationAccount'],
 
     run: function(cache, settings, callback) {
